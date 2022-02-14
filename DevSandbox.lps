@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="3">
+      <Unit0>
+        <Filename Value="DevSandbox.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="27"/>
+        <CursorPos X="8" Y="83"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="C:\lazarus\fpc\3.2.0\source\rtl\objpas\classes\lists.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="681"/>
+        <CursorPos X="16" Y="711"/>
+        <UsageCount Value="10"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="C:\lazarus\fpc\3.2.0\source\rtl\objpas\sysutils\sysstr.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="810"/>
+        <CursorPos X="10" Y="850"/>
+        <UsageCount Value="10"/>
+      </Unit2>
+    </Units>
+    <JumpHistory Count="11" HistoryIndex="10">
+      <Position1>
+        <Filename Value="DevSandbox.pas"/>
+        <Caret Line="25" Column="12"/>
+      </Position1>
+      <Position2>
+        <Filename Value="DevSandbox.pas"/>
+        <Caret Line="48" Column="41"/>
+      </Position2>
+      <Position3>
+        <Filename Value="DevSandbox.pas"/>
+        <Caret Line="29" Column="6"/>
+      </Position3>
+      <Position4>
+        <Filename Value="DevSandbox.pas"/>
+        <Caret Line="45" Column="31"/>
+      </Position4>
+      <Position5>
+        <Filename Value="DevSandbox.pas"/>
+        <Caret Line="46" Column="29"/>
+      </Position5>
+      <Position6>
+        <Filename Value="DevSandbox.pas"/>
+        <Caret Line="56" Column="28"/>
+      </Position6>
+      <Position7>
+        <Filename Value="DevSandbox.pas"/>
+        <Caret Line="65" Column="19" TopLine="13"/>
+      </Position7>
+      <Position8>
+        <Filename Value="DevSandbox.pas"/>
+        <Caret Line="63" Column="35" TopLine="13"/>
+      </Position8>
+      <Position9>
+        <Filename Value="DevSandbox.pas"/>
+        <Caret Line="65" TopLine="18"/>
+      </Position9>
+      <Position10>
+        <Filename Value="DevSandbox.pas"/>
+        <Caret Line="72" TopLine="18"/>
+      </Position10>
+      <Position11>
+        <Filename Value="DevSandbox.pas"/>
+        <Caret Line="84" Column="23" TopLine="18"/>
+      </Position11>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
