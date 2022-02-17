@@ -1,6 +1,9 @@
-JANE
-SMITH
-123 MAIN ST.
-SEATTLE
-WA
-13
+LastName=BROWN, FirstName=GEORGE, Address=345 3RD BLVD. APT. 200, City=SEATTLE, State=WA, Age=18
+LastName=BROWN, FirstName=HELEN, Address=345 3RD BLVD. APT. 200, City=SEATTLE, State=WA, Age=18
+LastName=JOHNSON, FirstName=CAROL, Address=234 2ND AVE, City=SEATTLE, State=WA, Age=67
+LastName=JONES, FirstName=FRANK, Address=234 2ND AVE., City=TACOMA, State=FL, Age=23
+LastName=SMITH, FirstName=ALICE, Address=123 MAIN ST., City=SEATTLE, State=WA, Age=45
+LastName=SMITH, FirstName=DAVE, Address=123 MAIN ST., City=SEATTLE, State=WA, Age=43
+LastName=SMITH, FirstName=EVE, Address=234 2ND AVE., City=TACOMA, State=WA, Age=25
+LastName=SMITH, FirstName=IAN, Address=123 MAIN ST , City=SEATTLE, State=WA, Age=18
+LastName=WILLIAMS, FirstName=BOB, Address=234 2ND AVE., City=TACOMA, State=WA, Age=26
