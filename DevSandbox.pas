@@ -17,7 +17,7 @@ uses
 
 type
 
-  { TPersonClass }
+  { TPersonObj }
 
   TPersonObj = class(TObject)
   private
@@ -34,6 +34,7 @@ type
     procedure Setstate(AValue: String);
     procedure Setage(AValue: Integer);
   public
+    constructor Create(fName, lName, address, city, state: String; age: Integer);
     property firstName : String read FfirstName write SetfirstName;
     property lastName : String read FlastName write SetlastName;
     property address : String read Faddress write Setaddress;
@@ -71,8 +72,6 @@ function SortByLastName(Person1, Person2: Pointer): integer;
       Result:= CompareText(TPersonObj (Person1).FlastName, TPersonObj (Person2).FlastName);
   end;
 
-//function TPersonClass.AddNewPersonObjList(
-
 { Custom ToString Function }
 function TPersonObj.ToString: String;
   begin
@@ -82,7 +81,7 @@ function TPersonObj.ToString: String;
 
 
 
-{ TPersonClass - Setters }
+{ TPersonObj - Setters }
 procedure TPersonObj.SetfirstName(AValue: String);
   begin
     if FfirstName=AValue then Exit;
@@ -119,6 +118,18 @@ procedure TPersonObj.Setage(AValue: Integer);
     Fage:=AValue;
   end;
 
+{ TPerson Obj Constructor }
+constructor TPersonObj.Create(fName, lName, address, city, state: String;
+  age: Integer);
+begin
+  FfirstName:= fName;
+  FlastName:= lName;
+  Faddress:= address;
+  Fcity:= city;
+  Fstate:= state;
+  Fage:= age;
+end;
+
 
 
 { MAIN }
@@ -138,14 +149,11 @@ begin
       { Splits string by comma }
       myStringList.CommaText:= line.Replace('.,', '.').ToUpper;
 
-      { Adds the 6 fields to a new TPersonClass object }
-      newPersonObj:= TPersonObj.Create;
-      newPersonObj.SetfirstName(myStringList[0]);
-      newPersonObj.SetlastName(myStringList[1]);
-      newPersonObj.Setaddress(myStringList[2]);
-      newPersonObj.Setcity(myStringList[3]);
-      newPersonObj.state:= myStringList[4];
-      newPersonObj.age:= StrToInt(myStringList[5]);
+      { Adds the 6 fields to a new TPersonObj object }
+      newPersonObj:= TPersonObj.Create(
+      myStringList[0], myStringList[1],
+      myStringList[2], myStringList[3],
+      myStringList[4], StrToInt(myStringList[5]));
 
       { Adds the TPersonObj object to TPersonList }
       newPersonObjList.Add(newPersonObj);
