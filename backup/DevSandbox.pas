@@ -67,8 +67,8 @@ var
   outputFile  : TextFile;
 
 
-{ Custom sort function to compare and order Person objects }
-{ First by last name, then first name if last name is the same }
+{ Custom sort function to compare and order the Person objects }
+{ First by last name, then first name if last names of compared objects is equal }
 function SortByLastName(Person1, Person2: Pointer): integer; begin
     if TPersonObj (Person1).FlastName = TPersonObj(Person2).FlastName then
       Result:= CompareText(TPersonObj (Person1).FfirstName, TPersonObj (Person2).FfirstName)
@@ -106,7 +106,7 @@ end;
 { MAIN }
 begin
 
-  { Instantiate TstringLists }
+  { Instantiates TstringLists }
   inputList:= TStringList.Create;
   outputList:= TStringList.Create;
   myStringList:= TStringList.Create;
@@ -117,11 +117,11 @@ begin
     for itemIndex:= 0 to inputList.Count-1 do begin     // Starts forloop
       line:= inputList.Strings[itemIndex];              // Assigns string to line var
 
-      { Splits string by comma }
+      { Splits string by comma and replaces '.,' with '.' to help with formatting }
       myStringList.CommaText:= line.Replace('.,', '.').ToUpper;
 
-      { Construct new TPersonObj object and populate its 6 property fields }
-      { with the indexes from myStringList }
+      { Constructs new TPersonObj object and populates its 6 property fields }
+      { With the indexes from myStringList }
       newPersonObj:= TPersonObj.Create(
       myStringList[0], myStringList[1],
       myStringList[2], myStringList[3],
@@ -132,33 +132,33 @@ begin
 
     end;
 
-    { Call the sort function pass the custom comparator }
-    { to order the object list by last name, then first name }
+    { Calls the sort function passing the custom comparator }
+    { To order the object list by last name, then first name }
     newPersonObjList.Sort(@SortByLastName);
 
 
-    { Is there a cleaner way to do this? }
+    { Preps output file making sure it's blank }
     AssignFile(outputFile, Output_File);
     Rewrite(outputFile);
     CloseFile(outputFile);
 
-    { Initialize variables used in the upcoming loop }
+    { Initializes variables used in the upcoming loop }
     tempName:='';
     newLine:='';
     count:=0;
 
     { New loop to pull each Person object out of object list}
-    { and print the object to a text file }
+    { And print the object to a text file }
     for itemIndex:= 0 to newPersonObjList.Count-1 do begin
       newPersonObj:= TPersonObj (newPersonObjList[itemIndex]);  // typecast to TPerson type
 
-      { Checks if new object has a new last name not already assigned to tempName }
-      { If no, assign it to tempName. Else move on}
+      { Compares person obj last name to tempName variable value }
+      { If not equal, assigns last name to tempName. Else move on}
       if tempName <> newPersonObj.lastName then begin
          tempName:= newPersonObj.lastName;
          outputList.LoadFromFile(Output_File);
 
-         { If current count is above 0 then writes count to file }
+         { If current count is above 0, count written to file. Else move on }
          if count > 0 then begin
              outputList.AddStrings('Family Member(s): ' + IntToStr(count));
              outputList.Add(newLine);
