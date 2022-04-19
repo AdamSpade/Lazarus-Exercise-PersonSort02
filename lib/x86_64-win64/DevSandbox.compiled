@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
-  <Compiler Value="C:\lazarus\fpc\3.2.0\bin\x86_64-win64\fpc.exe" Date="1381338938"/>
+  <Compiler Value="C:\lazarus\fpc\3.2.0\bin\x86_64-win64\fpc.exe" Date="1381340986"/>
   <Params Value=" -MObjFPC -Scghi -O1 -g -gl -l -vewnhibq -FiC:\Users\chq-adams\Desktop\Lazarus\DevExerciseClone02\Lazarus-Exercise-PersonSort02\lib\x86_64-win64 -FuC:\Users\chq-adams\Desktop\Lazarus\DevExerciseClone02\Lazarus-Exercise-PersonSort02\ -FUC:\Users\chq-adams\Desktop\Lazarus\DevExerciseClone02\Lazarus-Exercise-PersonSort02\lib\x86_64-win64\ -FEC:\Users\chq-adams\Desktop\Lazarus\DevExerciseClone02\Lazarus-Exercise-PersonSort02\ -oC:\Users\chq-adams\Desktop\Lazarus\DevExerciseClone02\Lazarus-Exercise-PersonSort02\DevSandbox.exe DevSandbox.pas"/>
 </CONFIG>
